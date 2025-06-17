@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background Circle -->
+    <circle cx="24" cy="24" r="22" fill="#2563EB" stroke="#1E40AF" stroke-width="2"/>
+    
+    <!-- Code Brackets -->
+    <path d="M16 14L20 14L20 18L18 18L18 16L16 16L16 14Z" fill="white"/>
+    <path d="M28 14L32 14L32 16L30 16L30 18L28 18L28 14Z" fill="white"/>
+    
+    <!-- Code Lines -->
+    <path d="M20 24L28 24" stroke="white" stroke-width="2" stroke-linecap="round"/>
+    <path d="M22 20L26 20" stroke="white" stroke-width="2" stroke-linecap="round"/>
+    <path d="M22 28L26 28" stroke="white" stroke-width="2" stroke-linecap="round"/>
+</svg> 

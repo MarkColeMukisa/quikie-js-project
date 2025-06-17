@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Payroll App</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Link the jQuery library from a CDN -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body class="bg-gradient-to-tr from-blue-100 to-indigo-200 min-h-screen flex items-center justify-center p-6">
+  <div class="container max-w-3xl w-full bg-white shadow-2xl rounded-xl p-8 space-y-6">
+    <h1 class="text-3xl font-bold text-center text-blue-900 mb-6">Payroll Calculator</h1>
+    
+    <form id="payrollForm" class="space-y-5">
+      <!-- Employee Name -->
+      <div class="form-field">
+        <label for="employeeName" class="relative block">
+          <input
+            type="text"
+            id="employeeName"
+            placeholder=""
+            class="peer w-full rounded border border-gray-300 px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none shadow-sm sm:text-sm"/>
+          <span class="absolute start-4 -top-2.5 bg-white px-1 text-sm font-medium text-gray-600 transition-transform peer-placeholder-shown:top-2.5 peer-placeholder-shown:text-gray-400 peer-focus:-top-2.5 peer-focus:text-gray-600">
+            Employee Name
+          </span>
+        </label>
+      </div>
+
+      <!-- Hours Worked -->
+      <div class="form-field">
+        <label for="hoursWorked" class="relative block">
+          <input
+            type="number"
+            id="hoursWorked"
+            placeholder=""
+            class="peer w-full rounded border border-gray-300 px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none shadow-sm sm:text-sm"/>
+          <span class="absolute start-4 -top-2.5 bg-white px-1 text-sm font-medium text-gray-600 transition-transform peer-placeholder-shown:top-2.5 peer-placeholder-shown:text-gray-400 peer-focus:-top-2.5 peer-focus:text-gray-600">
+            Hours Worked
+          </span>
+        </label>
+      </div>
+
+      <!-- Rate Per Hour -->
+      <div class="form-field">
+        <label for="ratePerHour" class="relative block">
+          <input
+            type="number"
+            id="ratePerHour"
+            placeholder=""
+            class="peer w-full rounded border border-gray-300 px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none shadow-sm sm:text-sm"/>
+          <span class="absolute start-4 -top-2.5 bg-white px-1 text-sm font-medium text-gray-600 transition-transform peer-placeholder-shown:top-2.5 peer-placeholder-shown:text-gray-400 peer-focus:-top-2.5 peer-focus:text-gray-600">
+            Rate Per Hour
+          </span>
+        </label>
+      </div>
+
+      <button type="button" id="calculateBtn" class="w-full py-3 bg-blue-700 hover:bg-blue-800 text-white font-semibold rounded-lg shadow transition duration-200">
+        Calculate
+      </button>
+    </form>
+
+    <div class="mt-10">
+      <h2 class="text-2xl font-bold text-gray-800 mb-4">Payroll Records</h2>
+      <div class="overflow-x-auto">
+        <table id="payrollTable" class="w-full text-left border-collapse">
+          <thead>
+            <tr class="bg-blue-600 text-white text-sm">
+              <th class="px-4 py-2">Employee Name</th>
+              <th class="px-4 py-2">Hours Worked</th>
+              <th class="px-4 py-2">Rate per Hour (UGX)</th>
+              <th class="px-4 py-2">Gross Pay (UGX)</th>
+              <th class="px-4 py-2">Tax (10%) (UGX)</th>
+              <th class="px-4 py-2">Net Pay (UGX)</th>
+            </tr>
+          </thead>
+          <tbody class="bg-white divide-y divide-gray-200 text-sm">
+            <!-- Payroll records will be appended here -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

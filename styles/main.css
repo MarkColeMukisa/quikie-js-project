@@ -1,0 +1,535 @@
+/* Custom styles to complement Tailwind CSS */
+
+/* Smooth scrolling for the entire page */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* Custom hover effects */
+.hover-scale {
+    transition: transform 0.2s ease-in-out;
+}
+
+.hover-scale:hover {
+    transform: scale(1.05);
+}
+
+/* Custom card styles */
+.challenge-card {
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.challenge-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, transparent, rgba(37, 99, 235, 0.1));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.challenge-card:hover::before {
+    opacity: 1;
+}
+
+.challenge-card:hover {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.challenge-card img {
+    transition: transform 0.5s ease;
+}
+
+.challenge-card:hover img {
+    transform: scale(1.05);
+}
+
+.challenge-card .fa-arrow-right {
+    transition: transform 0.3s ease;
+}
+
+.challenge-card:hover .fa-arrow-right {
+    transform: translateX(4px);
+}
+
+/* Difficulty badges */
+.challenge-card [class*="bg-"] {
+    transition: all 0.3s ease;
+}
+
+.challenge-card:hover [class*="bg-"] {
+    transform: scale(1.1);
+}
+
+/* Card icons */
+.challenge-card .fas {
+    transition: all 0.3s ease;
+}
+
+.challenge-card:hover .fas {
+    transform: scale(1.2);
+    color: #60A5FA;
+}
+
+/* Custom button styles */
+.btn-primary {
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile menu styles */
+.mobile-menu {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .mobile-menu {
+        display: block;
+    }
+    
+    .nav-links {
+        display: none;
+    }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Loading animation */
+.loading-spinner {
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #3498db;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Custom section spacing */
+.section-spacing {
+    @apply py-16 md:py-24;
+}
+
+/* Custom container max-width */
+.container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+/* Custom typography */
+.heading-xl {
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold;
+}
+
+.heading-lg {
+    @apply text-3xl md:text-4xl font-bold;
+}
+
+.heading-md {
+    @apply text-2xl md:text-3xl font-semibold;
+}
+
+/* Custom responsive utilities */
+@media (max-width: 768px) {
+    .mobile-menu {
+        @apply fixed inset-0 bg-white z-50;
+    }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    @apply bg-gray-100;
+}
+
+::-webkit-scrollbar-thumb {
+    @apply bg-blue-600 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    @apply bg-blue-700;
+}
+
+/* Top bar styles */
+.top-bar a {
+    transition: all 0.3s ease;
+}
+
+.top-bar .social-icons a {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.top-bar .social-icons a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Navigation styles */
+.nav-link {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #2563EB;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Punch It button styles */
+.punch-it-btn {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.punch-it-btn .arrow {
+    display: inline-block;
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+}
+
+.punch-it-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(37, 99, 235, 0.2);
+}
+
+.punch-it-btn:hover .arrow {
+    transform: translateX(4px);
+}
+
+/* Hero section styles */
+.hero-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(37, 99, 235, 0.9), rgba(30, 64, 175, 0.9));
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* Hero button styles */
+.hero-button {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 9999px;
+    font-weight: 600;
+    letter-spacing: 0.025em;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.hero-button.primary {
+    background-color: white;
+    color: #2563EB;
+    padding: 1rem 2.5rem;
+}
+
+.hero-button.secondary {
+    border: 2px solid white;
+    color: white;
+    padding: 1rem 2.5rem;
+    background-color: transparent;
+}
+
+.hero-button.secondary:hover {
+    background-color: white;
+    color: #2563EB;
+}
+
+.hero-button .arrow {
+    display: inline-block;
+    margin-left: 8px;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+}
+
+.hero-button.primary:hover .arrow {
+    animation: arrowBounce 1s infinite;
+}
+
+@keyframes arrowBounce {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(6px);
+    }
+}
+
+/* Wave animation */
+.wave {
+    animation: wave 10s linear infinite;
+}
+
+@keyframes wave {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-25%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Scroll indicator styles */
+.scroll-indicator {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    animation: bounce 2s infinite;
+}
+
+.scroll-indicator .mouse {
+    width: 30px;
+    height: 50px;
+    border: 2px solid white;
+    border-radius: 20px;
+    position: relative;
+}
+
+.scroll-indicator .mouse::before {
+    content: '';
+    width: 4px;
+    height: 8px;
+    background: white;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 8px;
+    border-radius: 2px;
+    animation: scroll 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0) translateX(-50%);
+    }
+    40% {
+        transform: translateY(-20px) translateX(-50%);
+    }
+    60% {
+        transform: translateY(-10px) translateX(-50%);
+    }
+}
+
+@keyframes scroll {
+    0% {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(20px);
+    }
+}
+
+/* Footer styles */
+footer {
+    position: relative;
+    overflow: hidden;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.5), transparent);
+}
+
+footer a {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+footer a:hover {
+    transform: translateX(4px);
+}
+
+footer .social-icons a {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: rgba(59, 130, 246, 0.1);
+    transition: all 0.3s ease;
+}
+
+footer .social-icons a:hover {
+    background-color: rgba(59, 130, 246, 0.2);
+    transform: translateY(-3px);
+}
+
+footer .contact-info li {
+    transition: all 0.3s ease;
+}
+
+footer .contact-info li:hover {
+    transform: translateX(4px);
+}
+
+footer .contact-info li i {
+    transition: all 0.3s ease;
+}
+
+footer .contact-info li:hover i {
+    transform: scale(1.2);
+}
+
+/* Challenges Section Styles */
+.challenges-heading {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.challenges-heading::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 50%;
+    background: linear-gradient(90deg, #2563EB, #60A5FA);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.challenges-heading:hover::after {
+    width: 100%;
+}
+
+.challenges-heading span {
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.challenges-heading:hover span {
+    opacity: 1;
+    transform: translateY(-2px);
+}
+
+.challenges-label {
+    display: inline-block;
+    background: #e0edff;
+    color: #2563eb;
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+    padding: 0.5rem 1.5rem;
+    border-radius: 9999px;
+    margin-bottom: 1.25rem;
+    margin-top: 0.5rem;
+    box-shadow: 0 1px 4px 0 rgba(37, 99, 235, 0.06);
+    transition: background 0.3s, color 0.3s;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.challenges-subtitle {
+    animation: fadeInUp 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.text-center.mb-16:hover .challenges-bar {
+    width: 8rem; /* 32 in Tailwind spacing, much longer */
+}
+
+.challenges-bar {
+    transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+} 

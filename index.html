@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Web Dev Challenge</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body class="bg-gray-100">
+    <!-- Top Bar -->
+    <div class="bg-blue-600 text-white py-3 top-bar">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-6">
+                    <a href="tel:+1234567890" class="flex items-center hover:text-gray-200 text-sm">
+                        <i class="fas fa-phone-alt mr-2"></i>
+                        Call Us Now: (123) 456-7890
+                    </a>
+                    <div class="h-4 w-px bg-white opacity-50"></div>
+                    <a href="#" class="hover:text-gray-200 text-sm">Contact</a>
+                    <div class="h-4 w-px bg-white opacity-50"></div>
+                    <a href="mailto:info@webdevchallenge.com" class="flex items-center hover:text-gray-200 text-sm">
+                        <i class="fas fa-envelope mr-2"></i>
+                        info@webdevchallenge.com
+                    </a>
+                </div>
+                <div class="flex items-center space-x-4 social-icons">
+                    <a href="#" class="hover:text-gray-200 text-sm"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="hover:text-gray-200 text-sm"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="hover:text-gray-200 text-sm"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="hover:text-gray-200 text-sm"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center space-x-4">
+                    <a href="#" class="flex items-center">
+                        <img src="images/logo.svg" alt="Web Dev Challenge Logo" class="h-12 w-auto">
+                        <span class="ml-3 text-2xl font-bold text-blue-600">The Web Dev Challenge</span>
+                    </a>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8 font-bold">
+                    <a href="#" class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Home</a>
+                    <a href="#challenges" class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Challenges</a>
+                    <a href="#leaderboard" class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Leaderboard</a>
+                    <a href="#resources" class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Resources</a>
+                    <a href="#contact" class="punch-it-btn bg-blue-600 text-white px-6 py-2 rounded-lg text-sm font-medium hover:bg-blue-700">
+                        Punch It!
+                        <span class="arrow">→</span>
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button class="mobile-menu-button p-2 rounded-md text-gray-700 hover:text-blue-600 focus:outline-none">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div class="mobile-menu hidden md:hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#" class="block text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="#challenges" class="block text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-base font-medium">Challenges</a>
+                <a href="#leaderboard" class="block text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-base font-medium">Leaderboard</a>
+                <a href="#resources" class="block text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-base font-medium">Resources</a>
+                <a href="#contact" class="block bg-blue-600 text-white px-3 py-2 rounded-md text-base font-medium hover:bg-blue-700">
+                    Punch It!
+                    <span class="arrow">→</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+<div class="relative min-h-screen flex items-center justify-center text-white overflow-hidden">
+    
+    <!-- Video Background -->
+    <video autoplay loop muted playsinline
+        class="absolute inset-0 w-full h-full object-cover z-0">
+        <source src="web-dev-challenge.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Blueish Overlay -->
+    <div class="absolute inset-0 bg-blue-900 bg-opacity-60 z-10"></div>
+
+    <!-- Hero Content -->
+    <div class="relative z-20 text-center px-4 max-w-3xl">
+        <h1 class="text-5xl sm:text-6xl lg:text-6xl font-extrabold tracking-tight mb-6">
+                    <span class="block">Introducing,</span>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-300 to-blue-300">The Web Dev Challenge</span>
+                </h1>
+                <p class="text-xl md:text-2xl max-w-3xl mx-auto mb-12 text-gray-100">
+                    Join our community of developers and take on weekly challenges to improve your coding abilities.
+                </p>
+
+        <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
+                    <a href="#challenges" class="hero-button primary w-full sm:w-auto px-8 py-4 rounded-md text-lg font-medium">
+                        Get Started
+                        <span class="arrow ml-2">→</span>
+                    </a>
+                    <a href="#learn-more" class="hero-button secondary w-full sm:w-auto px-8 py-4 rounded-md text-lg font-medium">
+                        Learn More
+                    </a>
+                </div>
+    </div>
+
+    <!-- Scroll Indicator -->
+        <a href="#challenges" class="scroll-indicator">
+            <div class="mouse"></div>
+        </a>
+
+     <!-- Decorative bottom wave -->
+        <div class="absolute bottom-0 left-0 right-0">
+            <svg class="w-full h-16 text-white wave" viewBox="0 0 1440 100" preserveAspectRatio="none">
+                <path fill="currentColor" d="M0,50 C150,100 350,0 500,50 C650,100 850,0 1000,50 C1150,100 1350,0 1440,50 L1440,100 L0,100 Z"></path>
+            </svg>
+        </div>
+    </div>
+
+
+    <!-- Challenges Section -->
+    <section id="challenges" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="challenges-label">CURRENT CHALLENGES</span>
+                <div class="challenges-subtitle text-blue-600 text-lg mt-4 font-normal">Level Up Your Skills</div>
+                <div class="challenges-bar w-24 h-1 bg-blue-600 mx-auto mt-4 transition-all duration-300"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Challenge Card 1 -->
+<div class="challenge-card bg-white rounded-lg overflow-hidden shadow-lg transform transition-all duration-300 hover:-translate-y-2">
+    <div class="relative">
+        <!-- Added date badge for consistency -->
+        <div class="absolute top-4 left-4 bg-blue-500 text-white px-3 py-2 rounded-lg font-bold flex items-center">
+            <span class="text-xl mr-1">08</span>
+            <span class="text-xs uppercase">
+                <span class="block">AUG</span>
+                <span class="block">2025</span>
+            </span>
+        </div>
+
+        <img src="https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg" alt="Responsive Navigation Challenge" class="w-full h-48 object-cover">
+        
+        <div class="absolute top-4 right-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm">
+            Beginner
+        </div>
+    </div>
+    <div class="p-6">
+        <div class="flex items-center mb-4">
+            <i class="fas fa-code text-blue-600 mr-3 text-xl"></i>
+            <h3 class="text-xl font-semibold text-gray-900">Responsive Navigation</h3>
+        </div>
+        <p class="text-gray-600 mb-6">Create a responsive navigation menu that works on all devices. Master the art of mobile-first design.</p>
+        <div class="flex items-center justify-between">
+            <div class="flex items-center text-sm text-gray-500">
+                <i class="far fa-clock mr-2"></i>
+                <span>2 weeks</span>
+            </div>
+            <a href="#" class="inline-flex items-center px-4 py-2 bg-gray-100 text-blue-500 text-sm font-semibold rounded-lg hover:bg-blue-500 hover:text-white transition-colors duration-300">
+                Start Challenge
+                <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+               <!-- Challenge Card 2  -->
+<div class="challenge-card bg-white rounded-lg overflow-hidden shadow-lg transform transition-all duration-300 hover:-translate-y-2">
+    <div class="relative">
+        <!-- Fixed date positioning -->
+        <div class="absolute top-4 left-4 bg-blue-500 text-white px-3 py-2 rounded-lg font-bold flex items-center">
+            <span class="text-xl mr-1">15</span>
+            <span class="text-xs uppercase">
+                <span class="block">AUG</span>
+                <span class="block">2025</span>
+            </span>
+        </div>
+
+        <img src="https://images.pexels.com/photos/1181298/pexels-photo-1181298.jpeg" alt="CSS Grid Layout Challenge" class="w-full h-48 object-cover">
+        
+        <div class="absolute top-4 right-4 bg-yellow-500 text-white px-3 py-1 rounded-full text-sm">
+            Intermediate
+        </div>
+    </div>
+    <div class="p-6">
+        <div class="flex items-center mb-4">
+            <i class="fas fa-th text-blue-600 mr-3 text-xl"></i>
+            <h3 class="text-xl font-semibold text-gray-900">CSS Grid Layout</h3>
+        </div>
+        <p class="text-gray-600 mb-6">Build a complex layout using CSS Grid and Flexbox. Learn modern CSS techniques for responsive designs.</p>
+        <div class="flex items-center justify-between">
+            <div class="flex items-center text-sm text-gray-500">
+                <i class="far fa-clock mr-2"></i>
+                <span>2 weeks</span>
+            </div>
+            <a href="#" class="inline-flex items-center px-4 py-2 bg-gray-100 text-blue-500 text-sm font-semibold rounded-lg hover:bg-blue-500 hover:text-white transition-colors duration-300">
+                Start Challenge
+                <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+                <!-- Js Card 3 -->
+    <div class="challenge-card bg-white rounded-lg overflow-hidden shadow-lg transform transition-all duration-300 hover:-translate-y-2">
+            <div class="relative">
+                <!-- Added date badge for consistency -->
+                <div class="absolute top-4 left-4 bg-blue-500 text-white px-3 py-2 rounded-lg font-bold flex items-center">
+                    <span class="text-xl mr-1">22</span>
+                    <span class="text-xs uppercase">
+                        <span class="block">AUG</span>
+                        <span class="block">2025</span>
+                    </span>
+                </div>
+
+                <img src="https://images.pexels.com/photos/163100/circuit-circuit-board-resistor-computer-163100.jpeg" alt="JavaScript Calculator Challenge" class="w-full h-48 object-cover">
+                
+                <div class="absolute top-4 right-4 bg-red-600 text-white px-3 py-1 rounded-full text-sm">
+                    Advanced
+                </div>
+            </div>
+    <div class="p-6">
+        <div class="flex items-center mb-4">
+            <i class="fas fa-calculator text-blue-600 mr-3 text-xl"></i>
+            <h3 class="text-xl font-semibold text-gray-900">JavaScript Calculator</h3>
+        </div>
+        <p class="text-gray-600 mb-6">Create a fully functional calculator using vanilla JavaScript. Master DOM manipulation and event handling.</p>
+        <div class="flex items-center justify-between">
+            <div class="flex items-center text-sm text-gray-500">
+                <i class="far fa-clock mr-2"></i>
+                <span>2 weeks</span>
+            </div>
+            <a href="frontend/challenge3.html" class="inline-flex items-center px-4 py-2 bg-gray-100 text-blue-500 text-sm font-semibold rounded-lg hover:bg-blue-500 hover:text-white transition-colors duration-300">
+                Start Challenge
+                <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <!-- About Section -->
+                <div class="space-y-6">
+                    <div class="flex items-center space-x-3">
+                        <img src="images/logo.svg" alt="Web Dev Challenge Logo" class="h-10 w-auto">
+                        <span class="text-2xl font-bold text-blue-400">The Web Dev Challenge</span>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Join our community of developers and take on weekly challenges to improve your coding abilities. Level up your skills with practical, real-world projects.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-6 text-blue-400">Quick Links</h3>
+                    <ul class="space-y-4">
+                        <li><a href="#" class="text-gray-400 hover:text-blue-400 transition-colors">Home</a></li>
+                        <li><a href="#challenges" class="text-gray-400 hover:text-blue-400 transition-colors">Challenges</a></li>
+                        <li><a href="#leaderboard" class="text-gray-400 hover:text-blue-400 transition-colors">Leaderboard</a></li>
+                        <li><a href="#resources" class="text-gray-400 hover:text-blue-400 transition-colors">Resources</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-blue-400 transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Resources -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-6 text-blue-400">Resources</h3>
+                    <ul class="space-y-4">
+                        <li><a href="#" class="text-gray-400 hover:text-blue-400 transition-colors">Documentation</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-blue-400 transition-colors">Tutorials</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-blue-400 transition-colors">Code Examples</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-blue-400 transition-colors">Community Forum</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-blue-400 transition-colors">Blog</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-6 text-blue-400">Contact Us</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-center space-x-3 text-gray-400">
+                            <i class="fas fa-map-marker-alt text-blue-400"></i>
+                            <span>123 Dev Street, Code City, 12345</span>
+                        </li>
+                        <li class="flex items-center space-x-3 text-gray-400">
+                            <i class="fas fa-phone-alt text-blue-400"></i>
+                            <span>(123) 456-7890</span>
+                        </li>
+                        <li class="flex items-center space-x-3 text-gray-400">
+                            <i class="fas fa-envelope text-blue-400"></i>
+                            <span>info@webdevchallenge.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="mt-16 pt-8 border-t border-gray-800">
+                <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                    <p class="text-gray-400 text-sm">
+                        &copy; 2024 The Web Dev Challenge. All rights reserved.
+                    </p>
+                    <div class="flex items-center space-x-2 text-gray-400 text-sm">
+                        <span>Developed by</span>
+                        <a href="#" class="text-blue-400 hover:text-blue-300 transition-colors font-semibold">
+                            The Undisputed 2
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html> 
